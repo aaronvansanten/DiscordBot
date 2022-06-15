@@ -36,8 +36,9 @@ client.on('messageCreate', message => {
   const serverQueue = queue.get(message.guild.id);
   const args = message.content.slice(prefix.length).split(/ +/);
   const command = args.shift().toLowerCase();
+  const name = (message.member.user.tag).split('#')[0];
 
-  console.log("Command: " + command + " has been received");
+  console.log("Command: " + command + " has been received by user " + name);
   
 
   switch (command) {
