@@ -9,13 +9,14 @@ module.exports = {
         if(args[0] < 1) return message.reply("You must delete at least one message!");
     
         await message.channel.messages.fetch({limit: args[0]})
-        .then (messages =>{ 
-            message.channel.bulkDelete(messages);
-        })
         .catch(err => {
             console.log(err);
             message.reply("An error occured");
         })
+        .then (messages =>{ 
+            message.channel.bulkDelete(messages);
+        })
+
     
 }
 }
