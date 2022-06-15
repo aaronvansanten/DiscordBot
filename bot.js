@@ -36,6 +36,8 @@ client.on('messageCreate', message => {
   const serverQueue = queue.get(message.guild.id);
   const args = message.content.slice(prefix.length).split(/ +/);
   const command = args.shift().toLowerCase();
+
+  console.log("Command: " + command + " has been received");
   
 
   switch (command) {
@@ -60,7 +62,7 @@ client.on('messageCreate', message => {
         setTimeout(() => {message.channel.bulkDelete(2); }, 2000);
         return;
       } 
-      client.commands.get('clear').execute(message, args);
+        client.commands.get('clear').execute(message, args);
       break;
       case "igl":
         if(!message.member.roles.cache.has('974027415493935194')) {
