@@ -28,7 +28,7 @@ const prefix = '!';
 
 client.once('ready', () => {
   console.log("Larry is activated")
-  client.user.setActivity("Playing csgo")
+  client.user.setActivity("with your mom")
 })
 
 client.on('messageCreate', message => {
