@@ -25,5 +25,7 @@ function getChannel(message, channel, voiceChannel = false) {
 
   async function getCurrentChannelMembers (message, channel) {
     const fetchedChannel = await channel.fetch(true)
-    console.log(fetchedChannel.members);
+    // console.log(fetchedChannel.members);
+    console.log(fetchedChannel.voiceChannel.type)
+    console.log(fetchedChannel.members.guild);
   }
